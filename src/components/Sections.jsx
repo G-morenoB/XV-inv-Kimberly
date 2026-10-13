@@ -4,7 +4,7 @@ import { maps } from "../config";
 import { Reveal } from "./Reveal";
 import { useInView } from "../lib/useScroll";
 import { sparkle } from "./Magic";
-import { Libelula } from "./Libelula";
+import { Luciernaga } from "./Luciernaga";
 
 export const Sec = ({ children, cls = "" }) => (<section className={"relative max-w-[520px] mx-auto px-5 py-10 text-center " + cls}>{children}</section>);
 
@@ -23,7 +23,7 @@ export function MapCard() {
   const route = "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent("Iglesia San Miguel Arcángel") + "&destination=" + encodeURIComponent("AD HOUSE");
   const halo = { paintOrder: "stroke" };
   const [mref, seen] = useInView({ threshold: .3 });
-  return (<Sec><Libelula pos="top-2 right-3" color="pink" from="right" size={72} delay={.5} /><Reveal variant="drop"><H>Cómo llegar</H></Reveal>
+  return (<Sec><Luciernaga pos="top-2 right-3" from="right" size={60} delay={.5} /><Reveal variant="drop"><H>Cómo llegar</H></Reveal>
     <Reveal variant="zoom" className="parch relative p-3 overflow-hidden">
       <svg ref={mref} viewBox="0 0 360 280" className={"mapsvg w-full rounded " + (seen ? "in" : "")} role="img" aria-label="Mapa ilustrado de la iglesia a AD HOUSE">
         <rect width="360" height="280" fill="#efe9c8"/>
@@ -54,7 +54,7 @@ export function PaseFamiliar() {
     const r = el.getBoundingClientRect();
     sparkle(r.left + r.width / 2, r.top + 70);
   }, 700);
-  return (<Sec><Libelula pos="-top-2 right-1" color="teal" from="right" size={76} delay={1.2} /><Reveal variant="zoom" className="parch relative px-5 py-8" onShow={boom}><Corners />
+  return (<Sec><Luciernaga pos="-top-3 right-2" from="right" size={64} delay={1.2} hover="b" /><Reveal variant="zoom" className="parch relative px-5 py-8" onShow={boom}><Corners />
     <Reveal variant="drop" delay={.5}><Crown size={84} className="mx-auto" /></Reveal>
     <Reveal variant="zoom" delay={.8} className="mx-auto mt-2 mb-4 px-4 py-3 rounded-lg border-2 border-[var(--gold)] text-[#f7f8e6]" style={{ background: "linear-gradient(#7d8c2a,#58671a)", boxShadow: "inset 0 0 0 3px rgba(255,255,255,.15)" }}>
       <h3 className="font-script text-5xl leading-tight">Pase Familiar</h3></Reveal>

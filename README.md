@@ -64,10 +64,10 @@ src/
 - Los estilos de estas animaciones están al final de `src/index.css`.
 - Si la persona tiene activado "reducir movimiento" en su dispositivo, las animaciones se omiten.
 
-## Libélulas
+## Luciérnagas
 
-- `src/components/Libelula.jsx`: libélula animada (alas que aletean) que entra volando cuando aparece su sección y se queda revoloteando.
-- Uso: `<Libelula pos="top-3 right-3" color="teal" from="right" size={78} />`
-  (`color`: green, teal, pink o gold; `from`: left o right; `hover`: a o b; `delay`: segundos).
+- `src/components/Luciernaga.jsx`: luciérnaga animada (alas que aletean y cola que se enciende y se apaga). Entra volando cuando aparece su sección y se queda dando vueltitas.
+- Uso: `<Luciernaga pos="top-3 right-3" from="right" size={66} />`
+  (`from`: left o right; `hover`: a o b, dos recorridos distintos; `delay`: segundos; `pos`: clases de Tailwind).
 - Están en las secciones de padres, misa, recepción, mapa, itinerario, Pase Familiar y color verde (no en la portada ni en la bienvenida).
-  Para quitar una, borra su línea `<Libelula ... />`.
+  Para quitar una, borra su línea `<Luciernaga ... />`.
