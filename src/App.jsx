@@ -33,7 +33,7 @@ function App() {
         <Reveal variant="left" delay={.1}><p>Guillermo Resendiz Escalante</p></Reveal>
         <Reveal variant="right" delay={.25}><p>Mayli Pedraza Marín</p></Reveal>
         <Reveal variant="zoom" delay={.4}><p className="italic text-[var(--rose)] mt-5">Mis padrinos</p></Reveal>
-        <Reveal variant="left" delay={.5}><p>Josse Emmanuel García Morales</p></Reveal>
+        <Reveal variant="left" delay={.5}><p>Josue Emmanuel García Morales</p></Reveal>
         <Reveal variant="right" delay={.65}><p>Elisa Auret López Casimiro</p></Reveal>
       </Sec>
       <Place title="Misa de acción de gracias" big="7:00 p.m." sub="Iglesia de San Miguel Arcángel" q="Iglesia San Miguel Arcángel" extra={<Luciernaga pos="-top-2 right-3" from="right" size={58} delay={.6} hover="b" />} />
