@@ -63,3 +63,11 @@ src/
 - `src/components/Sections.jsx`: el mapa dibuja la ruta y los pines caen; el Pase Familiar lanza estrellitas.
 - Los estilos de estas animaciones están al final de `src/index.css`.
 - Si la persona tiene activado "reducir movimiento" en su dispositivo, las animaciones se omiten.
+
+## Libélulas
+
+- `src/components/Libelula.jsx`: libélula animada (alas que aletean) que entra volando cuando aparece su sección y se queda revoloteando.
+- Uso: `<Libelula pos="top-3 right-3" color="teal" from="right" size={78} />`
+  (`color`: green, teal, pink o gold; `from`: left o right; `hover`: a o b; `delay`: segundos).
+- Están en las secciones de padres, misa, recepción, mapa, itinerario, Pase Familiar y color verde (no en la portada ni en la bienvenida).
+  Para quitar una, borra su línea `<Libelula ... />`.

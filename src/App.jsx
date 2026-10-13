@@ -7,6 +7,7 @@ import { Hero } from "./components/Hero";
 import { Cover } from "./components/Cover";
 import { H, MapCard, PaseFamiliar, Place, Sec } from "./components/Sections";
 import { MusicBtn } from "./components/MusicBtn";
+import { Libelula } from "./components/Libelula";
 import { Music } from "./lib/music";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <main className="max-w-[560px] mx-auto bg-[var(--night)] min-h-screen shadow-[0_0_60px_rgba(0,0,0,.6)]" >
       <Hero on={open} />
       <Sec>
+        <Libelula pos="top-3 right-3" color="teal" from="right" size={78} />
         <Reveal variant="drop"><H>Con el amor de mis padres</H></Reveal>
         <Reveal variant="left" delay={.1}><p>Guillermo Resendiz Escalante</p></Reveal>
         <Reveal variant="right" delay={.25}><p>Mayli Pedraza Marín</p></Reveal>
@@ -33,10 +35,11 @@ function App() {
         <Reveal variant="left" delay={.5}><p>Josse Emmanuel García Morales</p></Reveal>
         <Reveal variant="right" delay={.65}><p>Elisa Auret López Casimiro</p></Reveal>
       </Sec>
-      <Place title="Misa de acción de gracias" big="7:00 p.m." sub="Iglesia de San Miguel Arcángel" q="Iglesia San Miguel Arcángel" />
-      <Place title="Recepción" big="AD HOUSE" sub="9:00 p.m." q="AD HOUSE" />
+      <Place title="Misa de acción de gracias" big="7:00 p.m." sub="Iglesia de San Miguel Arcángel" q="Iglesia San Miguel Arcángel" extra={<Libelula pos="-top-1 right-2" color="green" from="right" size={70} delay={.6} />} />
+      <Place title="Recepción" big="AD HOUSE" sub="9:00 p.m." q="AD HOUSE" extra={<Libelula pos="bottom-1 left-3" color="gold" from="left" size={70} hover="b" delay={.6} />} />
       <MapCard />
       <Sec>
+        <Libelula pos="top-8 right-4" color="green" from="right" size={64} hover="b" />
         <Reveal variant="drop"><H>Esa noche</H></Reveal>
         <ul className="text-left border-l-2 border-[var(--gold)] max-w-[340px] mx-auto mt-5">
           {steps.map(([h, t], i) => (<Reveal as="li" key={h} variant="right" delay={i * .35} className="relative pl-6 pb-6 last:pb-0">
@@ -46,6 +49,7 @@ function App() {
       </Sec>
       <PaseFamiliar />
       <Sec>
+        <Libelula pos="top-12 left-3" color="gold" from="left" size={72} delay={.6} />
         <Reveal variant="hop" className="flex justify-center"><Frog size={120} /></Reveal>
         <Reveal variant="drop" delay={.3}><H>Color verde exclusivo de la quinceañera</H></Reveal>
         <Reveal variant="pop" delay={.6} className="w-20 h-20 mx-auto my-3 rounded-full border-[3px] border-[var(--gold)]" style={{ background: "radial-gradient(circle at 35% 30%,#c4ca77,#8a912e 55%,#58571c)", boxShadow: "0 0 30px rgba(169,189,60,.5)" }}></Reveal>
