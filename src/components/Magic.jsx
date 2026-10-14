@@ -7,7 +7,7 @@ export function Magic() {
   useEffect(() => {
     const c = ref.current, ctx = c.getContext("2d"); let ps = [], raf = 0;
     const fit = () => { c.width = innerWidth; c.height = innerHeight; }; fit(); addEventListener("resize", fit);
-    const cols = ["#ffe9a3", "#a9bd3c", "#ffffff", "#f0b4bf", "#c9a24f"];
+    const cols = ["#ffe9a3", "#ffffff", "#f0b4bf", "#c9a24f", "#c3a8e8"];
     const star = (x, y, r) => { ctx.beginPath(); for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, d = i % 2 ? r * .35 : r; ctx.lineTo(x + Math.cos(a) * d, y + Math.sin(a) * d); } ctx.closePath(); ctx.fill(); };
     const loop = () => {
       ctx.clearRect(0, 0, c.width, c.height); ps = ps.filter(p => p.l > 0);
