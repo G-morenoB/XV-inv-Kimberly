@@ -5,8 +5,11 @@ import { MusicBtn } from "./components/MusicBtn";
 import { Reveal } from "./components/Reveal";
 import { Contador } from "./components/Contador";
 import { Ubicacion } from "./components/Ubicacion";
+import { LluviaSobres } from "./components/LluviaSobres";
 import { Music } from "./lib/music";
 import { IMG, SIZE } from "./config";
+
+const SOMBRA = "shadow-[0_14px_40px_rgba(0,0,0,.45)]";
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -29,14 +32,22 @@ export default function App() {
         <MusicBtn on={playing} toggle={() => { if (playing) Music.pause(); else Music.resume(); setPlaying(!playing); }} />
       )}
       <main className={"mx-auto max-w-[640px] px-3 py-6 flex flex-col gap-8 " + (open ? "abierta" : "")}>
-        {/* Las dos imágenes de la clienta se muestran completas y sin modificar */}
-        <img src={IMG.invitacion} width={SIZE.invitacion[0]} height={SIZE.invitacion[1]} className="entrada w-full h-auto block shadow-[0_14px_40px_rgba(0,0,0,.45)]"
-          alt="Invitación a los XV años de Kimberly Aylinn Resendiz Pedraza. 18 de diciembre de 2026. Misa a las 7:00 p.m. en la iglesia de San Miguel Arcángel. Recepción en el salón de fiestas AD HOUSE a las 9:00 p.m. Inicio del programa a las 10:30 p.m. Color verde exclusivo de la quinceañera." />
+        {/* Las imágenes de la clienta se muestran completas y sin modificar */}
+        <img src={IMG.inicio} width={SIZE.inicio[0]} height={SIZE.inicio[1]} fetchpriority="high"
+          className={"entrada w-full h-auto block " + SOMBRA}
+          alt="Mis XV años, Kimberly Aylinn Resendiz Pedraza. La quinceañera, de espaldas y con vestido verde, frente a un castillo bajo la luna." />
+        <Reveal variant="up">
+          <img src={IMG.invitacion} width={SIZE.invitacion[0]} height={SIZE.invitacion[1]} decoding="async" className={"w-full h-auto block " + SOMBRA}
+            alt="Invitación a los XV años de Kimberly Aylinn Resendiz Pedraza. 18 de diciembre de 2026. Misa a las 7:00 p.m. en la iglesia de San Miguel Arcángel. Recepción en el salón de fiestas AD HOUSE a las 9:00 p.m. Inicio del programa a las 10:30 p.m. Color verde exclusivo de la quinceañera." />
+        </Reveal>
         <Reveal variant="up"><Contador /></Reveal>
         <Reveal variant="up"><Ubicacion /></Reveal>
         <Reveal variant="zoom">
-          <img src={IMG.pase} width={SIZE.pase[0]} height={SIZE.pase[1]} loading="lazy" decoding="async" className="w-full h-auto block shadow-[0_14px_40px_rgba(0,0,0,.45)]"
-            alt="Pase familiar. Tu presencia es el mejor regalo para mí. Mi mayor ilusión es compartir esta noche contigo. Si deseas hacerme un obsequio, te agradeceré que sea en efectivo, utilizando el sobre que encontrarás en la recepción. ¡Gracias por ser parte de mis XV años!" />
+          <div className={"relative overflow-hidden " + SOMBRA}>
+            <img src={IMG.pase} width={SIZE.pase[0]} height={SIZE.pase[1]} loading="lazy" decoding="async" className="w-full h-auto block"
+              alt="Pase familiar. Tu presencia es el mejor regalo para mí. Mi mayor ilusión es compartir esta noche contigo. Si deseas hacerme un obsequio, te agradeceré que sea en efectivo, utilizando el sobre que encontrarás en la recepción. ¡Gracias por ser parte de mis XV años!" />
+            <LluviaSobres />
+          </div>
         </Reveal>
         <p className="font-script text-3xl text-center text-[#e9dcb4]/80 pb-6">Kimberly Aylinn · 18 de diciembre de 2026</p>
       </main>

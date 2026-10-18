@@ -33,3 +33,15 @@ body.locked{position:fixed;inset:0;width:100%;overflow:hidden}
 .sr-zoom{transform:scale(.9)}
 
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;transition-delay:0s!important}.abrir span{animation:none!important}}
+
+/* Lluvia de sobres sobre el Pase Familiar */
+.sobre{position:absolute;top:0;opacity:0;will-change:transform}
+.lluvia.go .sobre{animation-name:sobre;animation-timing-function:linear;animation-iteration-count:2;animation-fill-mode:both}
+@keyframes sobre{
+  0%{transform:translate3d(0,-70px,0) rotate(var(--r0));opacity:0}
+  8%{opacity:1}
+  50%{transform:translate3d(var(--sx),calc(var(--fall) * .5),0) rotate(calc(var(--r0) + 180deg))}
+  92%{opacity:1}
+  100%{transform:translate3d(calc(var(--sx) * -.5),var(--fall),0) rotate(calc(var(--r0) + 340deg));opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.lluvia{display:none}}

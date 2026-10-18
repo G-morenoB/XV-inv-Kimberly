@@ -1,10 +1,11 @@
 import portada from "./assets/portada.webp";
 import invitacion from "./assets/invitacion.webp";
 import pase from "./assets/pase-familiar.webp";
+import inicio from "./assets/inicio.webp";
 
 // Imágenes de la clienta (no se modifican). Medidas en píxeles [ancho, alto].
-export const IMG = { portada, invitacion, pase };
-export const SIZE = { portada: [928, 1152], invitacion: [842, 1264], pase: [880, 1173] };
+export const IMG = { portada, invitacion, pase, inicio };
+export const SIZE = { portada: [928, 1152], invitacion: [842, 1264], pase: [880, 1173], inicio: [1451, 2576] };
 
 // Posición del botón "Abrir invitación" sobre la etiqueta blanca de la portada (en % de la imagen)
 export const BOTON = { left: 25.9, top: 41.8, width: 48.7, height: 7.8 };
@@ -16,6 +17,5 @@ export const EVENT = new Date(2026, 11, 18, 19, 0, 0);
 // pulsa "Compartir" > "Copiar vínculo" y pega ese enlace en lugar del que está aquí.
 const buscar = (q) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
 export const LINKS = {
-  misa: buscar("Iglesia San Miguel Arcángel"),
   recepcion: buscar("AD HOUSE salón de fiestas"),
 };

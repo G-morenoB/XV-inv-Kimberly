@@ -9,7 +9,6 @@ const Pin = () => (
 
 export function Ubicacion() {
   const lugares = [
-    ["Misa · 7:00 p.m.", "Iglesia de San Miguel Arcángel", LINKS.misa, "Cómo llegar a la iglesia"],
     ["Recepción · 9:00 p.m.", "Salón de fiestas AD HOUSE", LINKS.recepcion, "Cómo llegar al salón"],
   ];
   return (
