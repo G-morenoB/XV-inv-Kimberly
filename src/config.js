@@ -1,5 +1,5 @@
 import portada from "./assets/portada.webp";
-import invitacion from "./assets/invitacion.webp";
+import invitacion from "./assets/invitacion1.webp";
 import pase from "./assets/pase-familiar.webp";
 import inicio from "./assets/inicio.webp";
 
