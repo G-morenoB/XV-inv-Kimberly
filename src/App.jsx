@@ -49,7 +49,6 @@ export default function App() {
             <LluviaSobres />
           </div>
         </Reveal>
-        <p className="font-script text-3xl text-center text-[#e9dcb4]/80 pb-6">Kimberly Aylinn · 18 de diciembre de 2026</p>
       </main>
     </React.Fragment>
   );

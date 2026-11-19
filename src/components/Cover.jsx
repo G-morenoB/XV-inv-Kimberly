@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+
 import { Corners, Frog } from "./Decor";
 import { IMG } from "../config";
 
