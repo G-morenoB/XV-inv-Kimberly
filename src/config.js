@@ -15,7 +15,6 @@ export const EVENT = new Date(2026, 11, 18, 19, 0, 0);
 
 // Enlaces de ubicación. Para que lleven al punto exacto, abre el lugar en Google Maps,
 // pulsa "Compartir" > "Copiar vínculo" y pega ese enlace en lugar del que está aquí.
-const buscar = (q) => "https://maps.app.goo.gl/ohCmSdLb9BrstXSm8" + encodeURIComponent(q);
 export const LINKS = {
-  recepcion: buscar("AD HOUSE salón de fiestas"),
+  recepcion: "https://maps.app.goo.gl/ohCmSdLb9BrstXSm8",
 };
